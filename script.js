@@ -21,7 +21,7 @@ function is_factor (x, y) {
 }
 
 
-function display_script(x, y) {
+function display_script() {
     var x = amicable.x.value;
     var y = amicable.y.value;
     if (isAmicable(x, y)) {
