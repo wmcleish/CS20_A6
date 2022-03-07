@@ -1,15 +1,11 @@
 
+function sum(arr) {
+    return arr.reduce((partialSum, a) => partialSum + a, 0);
+}
 
-function isAmicable (x, y) {
-    if (x < 0){
-        x *= -1;
-    }else if (y < 0){
-        y *= -1;
-    }
-    var arrx = all_factors(x);
-    var arry = all_factors(y);
-    return sum(arrx) == y && sum(arry) == x
-} 
+function is_factor (x, y) {
+    return x % y == 0;
+}
 
 function all_factors (x) {
     var factors = [];
@@ -21,14 +17,20 @@ function all_factors (x) {
     return factors;
 }
 
-function is_factor (x, y) {
-    return x % y == 0;
+function isAmicable (x, y) {
+    if (x < 0){
+        x *= -1;
+    }else if (y < 0){
+        y *= -1;
+    }
+    var arrx = all_factors(x);
+    var arry = all_factors(y);
+    return sum(arrx) == y && sum(arry) == x
 }
 
-
 function display_script() {
-    var x = amicable.x.value;
-    var y = amicable.y.value;
+    var x = document.getElementById("x").value;
+    var y = document.getElementById("y").value;
 
     if (x == y){
         document.write("<div>The numbers: " + x + " and " + y + "are the same number!</div>");
