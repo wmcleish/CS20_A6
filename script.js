@@ -33,14 +33,12 @@ function display_script() {
     var y = parseInt(document.getElementById("y").value);
     console.log(x + y);
     if (x == y){
-        document.write("<div class='result'>The numbers: " + x + " and " + y + " are the same number!</div>");
+        document.getElementById("result").innerHTML = "The numbers: " + x + " and " + y + " are the same number!</div>";
     }else if (isAmicable(x, y)) {
         arrx = all_factors(x);
         arry = all_factors(y);
-        document.write("<div class='result'>The numbers: " + x + " and " + y + " are amicable <br>");
-        document.write("The factors of " + x + " are " + arrx + "<br>");
-        document.write("The factors of " + y + " are " + arry + "</div>");
+        document.getElementById("result").innerHTML = "The numbers: " + x + " and " + y + " are amicable <br>The factors of " + x + " are " + arrx + "<br>The factors of " + y + " are " + arry + "<br>";
     }else{
-        document.write("<div class='result'>The numbers: " + x + " and " + y + " are not amicable</div>");
+        document.getElementById("result").innerHTML = "The numbers: " + x + " and " + y + " are not amicable";
     }
 }

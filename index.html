@@ -8,15 +8,16 @@
     </head>
     <body>
         <h1>Amicable Numbers</h1>
-        <form id="amicable" onsubmit="display_script()">
+        <form id="amicable">
             <fieldset>
                 <label for="x">First Number</label>
                 <input type="number" id="x"/>
                 <label for="y">Second Number</label>
                 <input type="number" id="y"/>
-                <input type="submit"/>
+                <input type="button" value="Submit" name="submit_button" onclick="display_script()"/>
             </fieldset>
         </form>
+        <div class="result" id="result"></div>
         <script language="javascript" src="script.js"></script>
     </body>
 </html>
