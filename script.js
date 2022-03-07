@@ -29,18 +29,18 @@ function isAmicable (x, y) {
 }
 
 function display_script() {
-    var x = document.getElementById("x").value;
-    var y = document.getElementById("y").value;
-
+    var x = parseInt(document.getElementById("x").value);
+    var y = parseInt(document.getElementById("y").value);
+    console.log(x + y);
     if (x == y){
-        document.write("<div>The numbers: " + x + " and " + y + "are the same number!</div>");
+        document.write("<div class='result'>The numbers: " + x + " and " + y + " are the same number!</div>");
     }else if (isAmicable(x, y)) {
         arrx = all_factors(x);
         arry = all_factors(y);
-        document.write("<div>The numbers: " + x + " and " + y + "are amicable</div>");
-        document.write("<div>The factors of " + x + " are " + arrx + "<br>");
-        document.write("<div>The factors of " + y + " are " + arry + "</div>");
+        document.write("<div class='result'>The numbers: " + x + " and " + y + " are amicable <br>");
+        document.write("The factors of " + x + " are " + arrx + "<br>");
+        document.write("The factors of " + y + " are " + arry + "</div>");
     }else{
-        document.write("<div>The numbers: " + x + " and " + y + "are not amicable</div>");
+        document.write("<div class='result'>The numbers: " + x + " and " + y + " are not amicable</div>");
     }
 }
