@@ -1,6 +1,11 @@
 
 
 function isAmicable (x, y) {
+    if (x < 0){
+        x *= -1;
+    }else if (y < 0){
+        y *= -1;
+    }
     var arrx = all_factors(x);
     var arry = all_factors(y);
     return sum(arrx) == y && sum(arry) == x
@@ -24,7 +29,10 @@ function is_factor (x, y) {
 function display_script() {
     var x = amicable.x.value;
     var y = amicable.y.value;
-    if (isAmicable(x, y)) {
+
+    if (x == y){
+        document.write("<div>The numbers: " + x + " and " + y + "are the same number!</div>");
+    }else if (isAmicable(x, y)) {
         arrx = all_factors(x);
         arry = all_factors(y);
         document.write("<div>The numbers: " + x + " and " + y + "are amicable</div>");
